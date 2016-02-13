@@ -4,7 +4,8 @@
 [![Gem](https://img.shields.io/gem/dtv/sana.svg)](https://rubygems.org/gems/sana)
 [![Gemnasium](https://gemnasium.com/Narazaka/sana.svg)](https://gemnasium.com/Narazaka/sana)
 [![Inch CI](http://inch-ci.org/github/Narazaka/sana.svg)](http://inch-ci.org/github/Narazaka/sana)
-[![Build Status](https://travis-ci.org/Narazaka/sana.svg)](https://travis-ci.org/Narazaka/sana)
+[![Travis Build Status](https://travis-ci.org/Narazaka/sana.svg)](https://travis-ci.org/Narazaka/sana)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/Narazaka/sana?svg=true)](https://ci.appveyor.com/project/Narazaka/sana)
 [![codecov.io](https://codecov.io/github/Narazaka/sana/coverage.svg?branch=master)](https://codecov.io/github/Narazaka/sana?branch=master)
 [![Code Climate](https://codeclimate.com/github/Narazaka/sana/badges/gpa.svg)](https://codeclimate.com/github/Narazaka/sana)
 

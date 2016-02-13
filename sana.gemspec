@@ -3,13 +3,14 @@ lib = File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "sana"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Narazaka"]
   spec.email         = ["info@narazaka.net"]
 
   spec.summary       = %q{Ukagaka SHIORI subsystem 'Sana'}
   spec.description   = %q{Ukagaka SHIORI subsystem 'Sana'}
   spec.homepage      = "https://github.com/Narazaka/sana"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = ["lib"]
