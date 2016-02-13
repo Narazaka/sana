@@ -24,7 +24,7 @@ class Sana
   def load(dirpath)
     @dirpath = dirpath
     begin
-      events.send(:_load, dirpath)
+      events.public_send(:_load, dirpath)
     rescue NoMethodError
     end
   end
@@ -32,7 +32,7 @@ class Sana
   # SHIORI unload()
   def unload
     begin
-      events.send(:_unload)
+      events.public_send(:_unload)
     rescue NoMethodError
     end
   end
@@ -46,7 +46,7 @@ class Sana
       return build_response Sana::ResponseHelper.bad_request
     end
     begin
-      response = events.send(request.ID, request)
+      response = events.public_send(request.ID, request)
     rescue NoMethodError
     end
     case response
