@@ -41,7 +41,7 @@ class Sana
     end
     begin
       response = events.public_send(request.ID, request)
-    rescue
+    rescue => error
       raise unless error.is_a?(NoMethodError) && error.name.to_s == request.ID
     end
     case response
@@ -62,6 +62,7 @@ class Sana
   private
   def build_response(response)
     response.version ||= '3.0'
+    response.code ||= response.Value.to_s.empty? ? 204 : 200
     response.Charset = response.Charset || charset
     response.Sender = response.Sender || sender
     Shioruby.build_response(response)
