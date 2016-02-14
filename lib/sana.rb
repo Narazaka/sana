@@ -23,18 +23,12 @@ class Sana
   # @param [String] dirpath the ghost/master directory path
   def load(dirpath)
     @dirpath = dirpath
-    begin
-      events.public_send(:_load, dirpath)
-    rescue NoMethodError
-    end
+    events.public_send(:_load, dirpath)
   end
 
   # SHIORI unload()
   def unload
-    begin
-      events.public_send(:_unload)
-    rescue NoMethodError
-    end
+    events.public_send(:_unload)
   end
 
   # SHIORI request()
@@ -47,7 +41,8 @@ class Sana
     end
     begin
       response = events.public_send(request.ID, request)
-    rescue NoMethodError
+    rescue
+      raise unless error.is_a?(NoMethodError) && error.name.to_s == request.ID
     end
     case response
     when OpenStruct
